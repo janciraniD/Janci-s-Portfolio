@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+@theme{
+    --color-emerald: #0f2a1d;
+    --color-pale-green: #6b9071;
+    --color-cream: #fff7e6;
+    --color-black: #000000;
+}
+
+@theme {
+    --font-cormorant: "Cormorant Garamond";
+    --font-family: "Libre Baskerville"
+}
