@@ -1,11 +1,17 @@
 
-@media screen and (max-width: 767px) {
+/* =====================================
+   MOBILE RESPONSIVE - PORTFOLIO
+===================================== */
 
-    /* GLOBAL */
+@media (max-width: 767px) {
+
+    * {
+        box-sizing: border-box;
+    }
 
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 55px;
+        scroll-padding-top: 60px;
     }
 
     body {
@@ -13,42 +19,52 @@
         overflow-x: hidden;
     }
 
-    section {
+    /* NAVBAR */
+
+    #header {
         width: 100%;
     }
 
-    /* NAVBAR */
-
     #header nav {
-        justify-content: center;
+        width: 100%;
         padding: 12px 8px;
+        justify-content: center;
     }
 
     #header ul {
-        justify-content: center;
-        gap: clamp(10px, 3vw, 18px);
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        gap: 0;
         width: 100%;
-        flex-wrap: nowrap;
+    }
+
+    #header ul li {
+        flex: 0 1 auto;
+        min-width: 0;
     }
 
     #header ul a {
-        font-size: clamp(10px, 2.8vw, 13px);
+        display: block;
+        font-size: clamp(10px, 3vw, 13px);
         white-space: nowrap;
     }
 
-    /* HOME SECTION */
+    /* HOME */
 
     #home {
-        padding-top: 48px;
+        width: 100%;
+        padding-top: 45px;
     }
 
     #home > div {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 28px;
-        padding: 65px 20px 55px;
         width: 100%;
+        padding: 65px 18px 55px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;
     }
 
     #home > div > div:first-child {
@@ -58,10 +74,10 @@
 
     #home h1 {
         display: block;
-        font-size: clamp(30px, 8vw, 40px);
-        line-height: 1.15;
-        margin-bottom: 12px;
+        font-size: clamp(28px, 8vw, 38px);
+        line-height: 1.2;
         text-align: center;
+        margin-bottom: 12px;
     }
 
     #home p {
@@ -71,17 +87,17 @@
     }
 
     #home img {
-        width: clamp(155px, 48vw, 200px);
+        width: clamp(150px, 45vw, 190px);
         height: auto;
         aspect-ratio: 1 / 1;
         object-fit: cover;
         border-width: 5px;
     }
 
-    /* ABOUT SECTION */
+    /* ABOUT */
 
     #about {
-        padding: 65px 20px;
+        padding: 55px 18px;
     }
 
     #about > div {
@@ -95,6 +111,7 @@
     }
 
     #about > div > div {
+        display: flex;
         flex-direction: column;
         align-items: center;
         gap: 28px;
@@ -102,37 +119,41 @@
 
     #about > div > div > div {
         width: 100%;
+        min-width: 0;
     }
 
     #about img {
-        width: clamp(165px, 52vw, 220px);
-        height: clamp(165px, 52vw, 220px);
+        width: clamp(160px, 50vw, 210px);
+        height: clamp(160px, 50vw, 210px);
+        object-fit: cover;
         border-width: 5px;
     }
 
     #about p {
+        width: 100%;
         font-size: 14px;
         line-height: 1.8;
         text-align: left;
+        overflow-wrap: break-word;
     }
 
-    /* SKILLS SECTION */
+    /* SKILLS */
 
     #skill {
-        padding: 55px 18px;
-    }
-
-    #skill h2 {
-        font-size: 32px;
+        padding: 50px 16px;
     }
 
     #skill > div {
         width: 100%;
     }
 
+    #skill h2 {
+        font-size: 32px;
+    }
+
     #skill .grid {
         grid-template-columns: minmax(0, 1fr);
-        gap: 22px;
+        gap: 20px;
     }
 
     #skill .grid > div {
@@ -144,17 +165,19 @@
 
     #skill h3 {
         font-size: 21px;
-        margin-bottom: 16px;
+        margin-bottom: 15px;
     }
 
     #skill .flex-wrap {
+        display: flex;
+        flex-wrap: wrap;
         gap: 8px;
     }
 
     #skill .flex-wrap > div {
+        max-width: 100%;
         font-size: 11px;
         padding: 7px 10px;
-        max-width: 100%;
     }
 
     #skill .w-12,
@@ -163,10 +186,10 @@
         height: 40px;
     }
 
-    /* PROJECT SECTION */
+    /* PROJECTS */
 
     #project {
-        padding: 55px 18px;
+        padding: 50px 16px;
     }
 
     #project > div {
@@ -179,19 +202,19 @@
 
     #project .grid {
         grid-template-columns: minmax(0, 1fr);
-        gap: 22px;
+        gap: 20px;
     }
 
     #project .grid > div {
         width: 100%;
         min-width: 0;
-        padding: 20px;
+        padding: 18px;
         border-width: 5px;
     }
 
     #project h3 {
-        font-size: 20px;
-        line-height: 1.3;
+        font-size: 19px;
+        line-height: 1.4;
         margin-bottom: 12px;
     }
 
@@ -199,7 +222,7 @@
         font-size: 13px;
         line-height: 1.8;
         text-align: left;
-        overflow-wrap: break-word;
+        overflow-wrap: anywhere;
     }
 
     #project a {
@@ -207,10 +230,10 @@
         padding: 7px 12px;
     }
 
-    /* CONTACT SECTION */
+    /* CONTACT */
 
     #contact {
-        padding: 55px 18px;
+        padding: 50px 16px;
     }
 
     #contact > div {
@@ -223,11 +246,13 @@
 
     #contact > div > div:last-child {
         width: 100%;
-        padding: 20px;
+        padding: 20px 16px;
         border-width: 5px;
     }
 
     #contact > div > div:last-child > div {
+        display: flex;
+        align-items: center;
         gap: 12px;
         margin-bottom: 22px;
     }
@@ -251,37 +276,34 @@
     /* FOOTER */
 
     footer {
-        padding: 15px 10px;
+        padding: 14px 10px;
         font-size: 12px;
     }
 }
 
-/* EXTRA SMALL MOBILE SCREENS */
+/* VERY SMALL MOBILE */
 
-@media screen and (max-width: 360px) {
-
-    #header ul {
-        gap: 9px;
-    }
+@media (max-width: 360px) {
 
     #header ul a {
         font-size: 10px;
     }
 
     #home h1 {
-        font-size: 29px;
+        font-size: 28px;
     }
 
     #about,
     #skill,
     #project,
     #contact {
-        padding-left: 14px;
-        padding-right: 14px;
+        padding-left: 12px;
+        padding-right: 12px;
     }
 
     #skill .grid > div,
     #project .grid > div {
-        padding: 15px;
+        padding: 14px;
     }
 }
+
